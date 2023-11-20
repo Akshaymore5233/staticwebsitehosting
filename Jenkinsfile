@@ -7,14 +7,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                // Checkout the code from GitHub
-                sh 'echo "cloniing github repo"'
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'U7ON2T3WH57MMMMARVQHT5IOLB7ZDXOHFXAUEB3CQRDA66KLDUX3RXPE5E']]])
-                sh 'echo "cloniing github repo clonning comlited###############"'
-            }
-        }
 
         stage('Build') {
             steps {
